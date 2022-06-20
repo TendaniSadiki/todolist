@@ -1,0 +1,73 @@
+body{
+    font-family: 'Nunito', sans-serif;
+  }
+  .page {
+      height: 140px;
+      background: rgba(0, 204, 204, 0.651);
+      position:inherit;
+      margin-bottom: 30px;
+   }
+  .page .fa-search{
+    font-size: 1.5rem;
+    margin: 5px;
+    cursor: pointer;    
+      position: absolute;
+      top: 90px;
+      right: 10px;  
+    
+  }
+  #friends{
+    height: 270px;
+    position:inherit;
+    border-bottom:purple ridge 1px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  #friends h3{
+  margin: 4px;
+  }
+  #friends ul li{
+    list-style: none;
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  #friends .fa-user-circle{
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  .page .fa-search:hover{
+  color: white;
+  }
+  .page input{
+     background:purple;
+     padding: 5px;
+     margin: 5px;
+     color: white;
+     width: 80%;
+      
+  }
+  .page input::placeholder{
+    color:white ;
+  }
+  .page h1{
+    color: rgb(255, 255, 255);
+    margin: 5px;
+  }
+   body {
+     background-color: lavender;
+   }
+   
+   @media screen and (min-width: 400px) {
+     body {
+       background-color: lavender   }
+   }
+   
+   @media screen and (min-width: 800px) {
+     body {
+       background-color: lavender;
+     }
+   }
+  
