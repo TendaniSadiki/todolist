@@ -1,73 +1,122 @@
 body{
     font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+
   }
   .page {
       height: 140px;
-      background: rgba(0, 204, 204, 0.651);
       position:inherit;
       margin-bottom: 30px;
    }
-  .page .fa-search{
-    font-size: 1.5rem;
+   .page .todo{
+    background:purple;
+    padding: 5px;
     margin: 5px;
-    cursor: pointer;    
-      position: absolute;
-      top: 90px;
-      right: 10px;  
-    
-  }
-  #friends{
-    height: 270px;
+    color: white;
+    width: 70%;
+    border-radius: 15px;
+     
+ }
+ .page .todo::placeholder{
+   color:white ;
+ }
+ .page h1{
+   color: rgb(0, 0, 0);
+   margin: 5px;
+ }
+  #todoContent{
     position:inherit;
-    border-bottom:purple ridge 1px;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 0 20px;
+    margin: 10 auto;
+    width: 100%;
+    background: #F6F5F3;
+    border-radius: 15px;
+   
+
   }
-  #friends h3{
+  #todoContent h3{
   margin: 4px;
   }
-  #friends ul li{
+  #todoContent button{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: inline-flex;
+
+  }
+  #todoContent button:hover{
+    color: #F6F5F3;
+    background-color: slateblue;
+  }
+  .datesContent{
+    display: inline-block;
+
+  }
+  .datesContent input{
+    margin: 15px;
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    
+  }
+  .datesContent input:hover{
+    color: #F6F5F3;
+    background: rgba(22, 24, 27, 0.575);
+  }
+  
+  .dateWrapper{
+    display: inline-flex;
+  }
+  #todoContent ul{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .emptyContent{
+    text-align: center;
+  }
+  #todoContent ul li{
     list-style: none;
     font-size: 15px;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
+    margin: 10px;
+    height: 40px;
+    width: 100%;
+    
   }
-  #friends .fa-user-circle{
-    margin: 5px;
-    font-size: 1.5rem;
+  .todoList .left{
+  
+    width: 90%;
+    float: left;
   }
-  .page .fa-search:hover{
-  color: white;
+  .todoList .left span{
+    margin: 10px;
+    display: inline-flex;
+    width: 20%;
+    
   }
-  .page input{
-     background:purple;
-     padding: 5px;
-     margin: 5px;
-     color: white;
-     width: 80%;
-      
-  }
-  .page input::placeholder{
-    color:white ;
-  }
-  .page h1{
+  .todoList .left .firstDate{
     color: rgb(255, 255, 255);
-    margin: 5px;
   }
-   body {
-     background-color: lavender;
-   }
+  .todoList .right{
+    
+    float: right;
+    width: 10%;
+    display: inline-flex;
+    
+  }
+  .todoList i {
+    margin: 5px;
+    cursor: pointer;
+   
+  }
+  
+
    
    @media screen and (min-width: 400px) {
      body {
        background-color: lavender   }
    }
    
-   @media screen and (min-width: 800px) {
-     body {
-       background-color: lavender;
-     }
-   }
+  
   

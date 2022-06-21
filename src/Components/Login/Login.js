@@ -50,7 +50,8 @@ else if(!getDetails.pass.match(lowerCaseLetters)){
       
       if(email === user.email && password === user.pass){
         let getProfileInfo = {
-          email: user.name,
+          name: user.name,
+          email: user.email,
           surname: user.surname,
           number: user.number
           

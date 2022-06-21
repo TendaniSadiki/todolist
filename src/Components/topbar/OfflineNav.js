@@ -7,8 +7,6 @@ function OfflineNav() {
             <br></br>
             <br></br>
             <br></br>
-            
-
             <h1>Welcome, You are Offline  </h1>
         </div>
     )

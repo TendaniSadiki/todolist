@@ -5,7 +5,7 @@ export default function Topbar(){
 // Desktop and Mobile NavBar
     return(
       <nav className='Topbar'>
-           <Navigation/>,
+           <Navigation/>
            <MobileTopBar/>
       </nav>
     );
