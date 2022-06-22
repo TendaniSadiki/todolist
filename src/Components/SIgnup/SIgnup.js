@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import './signup.css';
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -83,10 +84,11 @@ const Signup = () => {
       <br></br>
       <br></br>
       <br></br>
-      <p>Signup page</p>{" "}
       <div className="container">
         <div className="form-box">
+          
           <div className="header-form">
+          <h1>Sign Up</h1>
             <h4 className="text-primary text-center">
               <i
                 className="fa fa-user-circle"
@@ -197,7 +199,7 @@ const Signup = () => {
                 Sign Up
               </button>
               <div className="message"></div>
-              <NavLink to="../Login" exact>
+              <NavLink to="./Login" className="NavLink" exact>
                 <span>
                   <i>Sign In</i>
                 </span>

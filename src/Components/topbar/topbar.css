@@ -70,7 +70,16 @@
   top: 0;
   position: fixed;
   left: 0;
-  color: #181818;
+  background:#D83F87;
+
+}
+.linksContainer{
+  color: white;
+  background:#D83F87;
+
+}
+.rightNav{
+  text-align:center;
 }
 /*Break none*/
 .Navigation .linksContainer br{

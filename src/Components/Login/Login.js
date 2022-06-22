@@ -80,11 +80,11 @@ if(!userFound){
              <br></br>
              <br></br>
              <br></br>
-            <p>Login page</p>
             <div className="container">
+              
         <div className="form-box">
           <div className="header-form">
-            <h4 className="text-primary text-center"><i className="fa fa-user-circle" style={{fontSize:"110px"}}></i></h4>
+          <h1>Sign In</h1>
             <div className="image">
             </div>
           </div>
@@ -113,7 +113,8 @@ if(!userFound){
   />
 </div>
  <button type="button" className="btn btn-secondary btn-block" onClick={signin}>Log In</button>
- <NavLink to="../SIGNUP  "  exact ><span><i>Sign Up</i></span>
+ <br></br>
+ <NavLink to="/SIGNUP" className="NavLink" exact ><span><i>Sign Up</i></span>
 </NavLink>  
    </form>  
           </div>

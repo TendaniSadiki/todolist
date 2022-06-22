@@ -7,7 +7,9 @@ function OfflineNav() {
             <br></br>
             <br></br>
             <br></br>
-            <h1>Welcome, You are Offline  </h1>
+            <h1>Welcome</h1>
+            <h3>Login to explore</h3>
+            <div className="rightNav" >To Do List</div>
         </div>
     )
 }

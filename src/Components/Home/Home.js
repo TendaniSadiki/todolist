@@ -55,7 +55,13 @@ const sortToDoList =() => {
 }
 useEffect(()=>{
     sortToDoList();
+    
 },[])
+const handleRemoveItem =() => {
+
+        console.log("delete")
+    
+}
 return(
     <div className="page">
     <br></br>
@@ -116,8 +122,8 @@ return(
                   <span>Start Date:{todoList.takendate} </span>
                   <span>Expire Date: {todoList.exDate} </span>
                   <div className="right">
-              <i><CgPen/></i>
-              <i><CgClose/></i>
+              <i ><CgPen/></i>
+              <i onClick={handleRemoveItem}><CgClose/></i>
               </div>
               </div>
               </div>

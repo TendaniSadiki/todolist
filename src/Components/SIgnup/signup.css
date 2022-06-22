@@ -31,20 +31,17 @@ body{
       border-radius:15px;
       margin: 2px;
     }
-   
-    .form-box input[type=text]{
-      color:black;
-    }
 
     .form-box h1{
       color:white;
     }
+    
     .form-box .NavLink{
       color:white;
       text-decoration:none;
     }
   .header-form{
-    margin-bottom:15px;
+    margin-bottom:2px;
   }
   button{
     margin-top:40px;
