@@ -67,7 +67,7 @@ else if(!getDetails.pass.match(lowerCaseLetters)){
       
    }
 if(!userFound){
-  alert("failed to log in")
+  alert("Wrong Password or Email")
 }
     
 

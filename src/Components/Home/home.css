@@ -33,6 +33,7 @@ body{
    
 
   }
+  
   #todoContent h3{
   margin: 4px;
   }
@@ -67,6 +68,17 @@ body{
   
   .dateWrapper{
     display: inline-flex;
+    width:100%
+  }
+  .dateLeft{
+    width:80%;
+    float: left;
+    display:inline-flex;
+    
+  }
+  .dateRight{
+    width:20%;
+    float:right;
   }
   #todoContent ul{
     width: 100%;

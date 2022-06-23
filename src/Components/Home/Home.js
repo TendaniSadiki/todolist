@@ -58,7 +58,7 @@ useEffect(()=>{
     
 },[])
 const handleRemoveItem =() => {
-
+    const newArray = todoResult.filter(todoList => todoList !== todoList)
         console.log("delete")
     
 }
@@ -88,6 +88,7 @@ return(
             <div className="datesContent">
             <label>Start date</label>
             <input type="date" 
+            min="2022-06-22"
             id="date"
             value={startDate}
             onChange={(text) => {
