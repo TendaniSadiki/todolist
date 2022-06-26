@@ -9,12 +9,16 @@ const [todoResult, setTodoResult]= useState([]);
 const [todo, setTodo] = useState("");
 const [startDate, setStartDate] = useState("");
 const [expireDate, setExDate] = useState("");
+const [buttonText, setButtonText] = useState("");
+const [selectedIndex, setSelectedIndex] =useState(null);
+
 const todoSubmit = () => {
     let todoDetails = {
         name: todo,
         takendate: startDate,
         exDate: expireDate,
-        user: user.email
+        user: user.email,
+        id: Date.now()
 }
 
     
@@ -50,17 +54,30 @@ const sortToDoList =() => {
             toDoArray.push(toDoList[x])
         }
     }
-    console.log(toDoArray)
     setTodoResult(toDoArray)
 }
 useEffect(()=>{
     sortToDoList();
     
 },[])
-const handleRemoveItem =() => {
-    const newArray = todoResult.filter(todoList => todoList !== todoList)
-        console.log("delete")
-    
+
+const handleRemoveItem =(id) => {
+
+   const newArray = todoResult.filter((todoList) => todoList.id !== id);
+
+   let storedUserDetails = new Array();
+   let storedUsers = JSON.parse(localStorage.getItem("todo"));
+   storedUserDetails = storedUsers.filter((todoList) => todoList.id !== id);
+   localStorage.setItem("todo", JSON.stringify(storedUserDetails));
+   setTodoResult(newArray)
+}
+const editHandler =(todoList) =>{
+    setTodo(todoList.name)
+    setButtonText(
+        <div><input type="text" value={todo}  onChange={(text) => {
+            setTodo(text.target.value);
+          }}></input></div>
+    );
 }
 return(
     <div className="page">
@@ -116,15 +133,17 @@ return(
    {todoResult.map((todoList,index)=>{
       return(
           <li key={index}>
+              <hr/>
           <div className="todoList">
               <div className="left">
               <div>
-                  <span>Todo : {todoList.name}</span>
+                  <span>Todo : {selectedIndex === index ?  buttonText : todoList.name}</span>
                   <span>Start Date:{todoList.takendate} </span>
                   <span>Expire Date: {todoList.exDate} </span>
                   <div className="right">
-              <i ><CgPen/></i>
-              <i onClick={handleRemoveItem}><CgClose/></i>
+                      {selectedIndex === index ? (<p onClick={()=>setSelectedIndex(null)}>Save</p>):  <i onClick={()=>{editHandler(todoList);setSelectedIndex(index)}}><CgPen/></i>}
+             
+              <i onClick={ ()=> handleRemoveItem(todoList.id)}><CgClose/></i>
               </div>
               </div>
               </div>
@@ -147,3 +166,5 @@ return(
     </div>
     );
 }
+
+
